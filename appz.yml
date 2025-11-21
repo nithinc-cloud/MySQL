@@ -5,13 +5,13 @@
 
     build:
         version: 8.0
-        env: PROD
+        env: DEV
         build_file: none
         output_files: output/*.zip
         image_template: mysql-8.0
 
     deploy:
-        context: ecloudcontrol/PROD
+        context: nithinc-cloud/DEV
         type: statefulset
         replicas: 1
         ingress: none
